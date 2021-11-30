@@ -1,4 +1,4 @@
-git add .
+git add . 
 
 echo 'Nombre del commit:'
 read commitMessage
