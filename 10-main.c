@@ -10,7 +10,7 @@
 int main(void)
 {
     binary_tree_t *root;
-    size_t height;
+    size_t depth;
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
@@ -25,11 +25,17 @@ int main(void)
     binary_tree_insert_right(root, 128);
     binary_tree_print(root);
 
-    height = binary_tree_height(root);
-    printf("Height from %d: %lu\n", root->n, height);
-    height = binary_tree_height(root->right);
-    printf("Height from %d: %lu\n", root->right->n, height);
-    height = binary_tree_height(root->left->right);
-    printf("Height from %d: %lu\n", root->left->right->n, height);
-    return (0);
+    depth = binary_tree_depth(root);
+    printf("Depth of %d: %lu\n", root->n, depth);
+    depth = binary_tree_depth(root->right);
+    printf("Depth of %d: %lu\n", root->right->n, depth);
+    depth = binary_tree_depth(root->left->right);
+    printf("Depth of %d: %lu\n", root->left->right->n, depth);
+    depth = binary_tree_depth(root->right->right);
+	printf("Depth of %d: %lu\n", root->right->right->n, depth);
+	depth = binary_tree_depth(root->left->left->right->right);
+	printf("Depth of %d: %lu\n", root->left->left->right->right->n, depth);
+
+
+	return (0);
 }
