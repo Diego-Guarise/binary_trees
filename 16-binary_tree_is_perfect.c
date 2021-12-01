@@ -13,7 +13,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	{
 		if (tree->left)
 			height_left = binary_tree_height(tree->left) + 1;
-if (tree->right)
+		if (tree->right)
 			height_right = binary_tree_height(tree->right) + 1;
 
 		if (height_left >= height_right)
@@ -45,7 +45,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 
 /**
   * _exp - calculates 2 to the power of exp
-  * height: exponent
+  * @height: exponent
   * Return: result
   */
 size_t _exp(size_t height)
