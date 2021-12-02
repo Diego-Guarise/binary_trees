@@ -9,7 +9,9 @@
 
 heap_t *array_to_heap(int *array, size_t size)
 {
+	heap_t *srry = NULL;
+
 	if (array || size)
-		return (1);
-	return (0);
+		return (srry);
+	return (srry);
 }

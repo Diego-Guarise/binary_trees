@@ -8,7 +8,9 @@
 
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
+	int *srry = NULL;
+
 	if (heap || size)
-		return (1);
-	return (0);
+		return (srry);
+	return (srry);
 }
