@@ -10,9 +10,13 @@
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 {
 	binary_tree_t *change = tree->left;
+	binary_tree_t *child = NULL;
 
+	printf("%d", tree->n);
 	tree->left = change->right;
 	change->right= tree;
+	if (tree->left->right)
+		child->parent = change;
 	tree = change;
 
 	return (tree);
